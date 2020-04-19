@@ -92,11 +92,11 @@ require('connectivity.php');
     		$row = $result->fetch_assoc();
 
     		if ($username == $row['username'] && $email == $row['email']){
-    			echo "<script type='text/javascript'> window.alert('User already exits! '); window.location.href='http://localhost/Yeshwanth_coding_internshala/login_page.php';</script>";
+    			echo "<script type='text/javascript'> window.alert('User already exits! '); window.location.href='https://yeshwanth-coding-internshala.herokuapp.com/login_page.php';</script>";
     		}
     		else{
     			mysqli_query($conn,$sql);
-    			echo "<script type='text/javascript'> window.alert('Signup Successful!'); window.location.href='http://localhost/Yeshwanth_coding_internshala/login_page.php';</script>";
+    			echo "<script type='text/javascript'> window.alert('Signup Successful!'); window.location.href='https://yeshwanth-coding-internshala.herokuapp.com/login_page.php';</script>";
     		}
 
 			
