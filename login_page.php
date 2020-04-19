@@ -1,3 +1,6 @@
+<?php
+require('connectivity.php');
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -73,7 +76,7 @@
 		$email = "";
 		$password = "";
 
-		$db = mysqli_connect('localhost','root','','biren');
+		$conn = mysqli_connect('localhost','root','','biren');
 
 		if(isset($_POST['register'])){
 			$username = $_POST['username'];
@@ -85,14 +88,14 @@
 
 			$sql1 = "select * from signup where username ='" .$username. "' and email='".$email."'";
 			
-			$result = $db->query($sql1);
+			$result = $conn->query($sql1);
     		$row = $result->fetch_assoc();
 
     		if ($username == $row['username'] && $email == $row['email']){
     			echo "<script type='text/javascript'> window.alert('User already exits! '); window.location.href='http://localhost/Yeshwanth_coding_internshala/login_page.php';</script>";
     		}
     		else{
-    			mysqli_query($db,$sql);
+    			mysqli_query($conn,$sql);
     			echo "<script type='text/javascript'> window.alert('Signup Successful!'); window.location.href='http://localhost/Yeshwanth_coding_internshala/login_page.php';</script>";
     		}
 
