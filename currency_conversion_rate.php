@@ -26,7 +26,7 @@ curl_close($ch);
 $exchangeRates = json_decode($json, true);
 
 // Access the exchange rate values, e.g. GBP:
-echo $exchangeRates['quotes']['USDINR'];
+echo "1 USD = ".$exchangeRates['quotes']['USDINR']." INR";
 echo "<br>";
 echo date('m/d/Y H:i:s', $exchangeRates['timestamp']);
 ?>
