@@ -1,6 +1,3 @@
-<?php
-require('connectivity.php');
-?>
 <!DOCTYPE html>
 <html>
 <head>
